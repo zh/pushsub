@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Administration</title>
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" />
+</head>
+<body>
+<h2>Administration</h2>
+<div id="content">
+<ul>  
+<% @items_count.each do |i| %>
+<li><a href="/t/<%= i[:topic] %>"><%= i[:topic] %></a> -- <%= i[:count] %> item(s)
+    <a href="/t/<%= i[:topic] %>?clear=<%= @secret %>&admin=yes">[clear]</a>
+</li>
+<% end %>  
+</ul>  
+</div>
+<p><a href="/">Create topic</a></p>
+<p><small>Copyright &copy; 2010 by <a href="http://github.com/zh/">Stoyan Zhekov</a></small></p>
+</body>
+</html>

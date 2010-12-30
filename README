@@ -1,0 +1,21 @@
+PusherAPP
+==========
+
+Universal PuSH subscriber + websocket notifications
+
+Needed gems (.gems)
+--------------------
+sinatra
+sequel
+simple-rss
+json
+pusher
+
+Heroku config (environment variables)
+--------------------------------------
+
+ heroku config:add PUSH_ID=1234
+ heroku config:add PUSH_KEY=xxxxxxxxxxxxxxxxxxxx
+ heroku config:add PUSH_SECRET=yyyyyyyyyyyyyyyyyyyy
+ heroku config:add AUSER=admin
+ heroku config:add APASS=secret
